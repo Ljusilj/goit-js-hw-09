@@ -1,3 +1,5 @@
+
+
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
@@ -20,7 +22,7 @@ document.querySelector('.form').addEventListener('submit', function(event) {
 
   const promises = [];
 
-  for (let i = 1; i <= amountInput; i++) {
+  for (let i = 1; i <= amountInput; i+=1) {
     const currentDelay = delayInput + (i - 1) * stepInput;
     promises.push(createPromise(i, currentDelay));
   }
@@ -35,3 +37,6 @@ document.querySelector('.form').addEventListener('submit', function(event) {
     });
   });
 });
+
+
+
